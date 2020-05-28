@@ -20,9 +20,10 @@ WHERE (
 ORDER BY birth_date ASC, hire_date DESC
 LIMIT 5;
 
-# Try to think of your results as batches, sets, or pages. The first five results are your first page.
-# The five after that would be your second page, etc.
-# Update the query to find the tenth page of results.
+# Try to think of your results as batches, sets, or pages. The first 5 results are your first page.
+# The 5 after that would be your second page, etc.
+# Update the query to find the 10 page of results.
+
 SELECT *
 FROM employees
 WHERE (
@@ -31,3 +32,6 @@ WHERE (
           )
 ORDER BY birth_date ASC, hire_date DESC
 LIMIT 5 OFFSET 45 ;
+
+# todo page # = (limit + offset)/limit
+# todo to figure out offset, ( limit * (page # -1) )
