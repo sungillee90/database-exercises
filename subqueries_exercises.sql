@@ -43,6 +43,3 @@ WHERE emp_no IN (
     WHERE gender = 'F' AND
           dm.emp_no > curdate()
 );
-
-# If I stated both employeees, and dept_manager,
-# I can grab the information right?
