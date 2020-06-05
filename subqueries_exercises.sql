@@ -43,3 +43,14 @@ WHERE emp_no IN (
     WHERE gender = 'F' AND
           dm.emp_no > curdate()
 );
+
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN(
+    SELECT emp_no
+    FROM dept_manager
+    WHERE to_date > curdate()
+    )
+  AND gender = 'F';
+
+
